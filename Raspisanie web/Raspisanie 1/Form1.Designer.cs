@@ -32,15 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label32 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.label30 = new System.Windows.Forms.Label();
             this.elec_data = new System.Windows.Forms.TextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.elec_search = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.elec_nazn = new System.Windows.Forms.TextBox();
             this.elec_otpr = new System.Windows.Forms.TextBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.train_data = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,8 +59,10 @@
             this.train_nazn = new System.Windows.Forms.TextBox();
             this.train_otpr = new System.Windows.Forms.TextBox();
             this.train_search = new System.Windows.Forms.Button();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.avia_data = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -57,7 +70,7 @@
             this.avia_nazn = new System.Windows.Forms.TextBox();
             this.avia_otpr = new System.Windows.Forms.TextBox();
             this.avia_search = new System.Windows.Forms.Button();
-            this.webBrowser3 = new System.Windows.Forms.WebBrowser();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -130,12 +143,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -143,20 +150,21 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minute_on)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hour_on)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -164,6 +172,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -179,6 +188,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.elec_data);
             this.tabPage1.Controls.Add(this.pictureBox7);
@@ -187,7 +198,6 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.elec_nazn);
             this.tabPage1.Controls.Add(this.elec_otpr);
-            this.tabPage1.Controls.Add(this.webBrowser1);
             this.tabPage1.Controls.Add(this.pictureBox13);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -196,6 +206,70 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Электрички";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            this.label32.AutoEllipsis = true;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(27, 84);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(19, 13);
+            this.label32.TabIndex = 28;
+            this.label32.Text = "    ";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label32.Visible = false;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Info;
+            this.listView1.CheckBoxes = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(30, 100);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(570, 370);
+            this.listView1.TabIndex = 5;
+            this.listView1.TileSize = new System.Drawing.Size(170, 40);
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "№";
+            this.columnHeader7.Width = 40;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Рейсы";
+            this.columnHeader1.Width = 160;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Отправление";
+            this.columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Прибытие";
+            this.columnHeader3.Width = 90;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "В пути";
+            this.columnHeader4.Width = 90;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Остановки";
+            this.columnHeader5.Width = 90;
             // 
             // label30
             // 
@@ -211,14 +285,24 @@
             this.elec_data.Location = new System.Drawing.Point(295, 30);
             this.elec_data.Name = "elec_data";
             this.elec_data.Size = new System.Drawing.Size(100, 20);
-            this.elec_data.TabIndex = 23;
+            this.elec_data.TabIndex = 3;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Raspisanie_1.Properties.Resources.elec_form;
+            this.pictureBox7.Location = new System.Drawing.Point(511, 6);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(146, 45);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox7.TabIndex = 22;
+            this.pictureBox7.TabStop = false;
             // 
             // elec_search
             // 
             this.elec_search.Location = new System.Drawing.Point(433, 27);
             this.elec_search.Name = "elec_search";
             this.elec_search.Size = new System.Drawing.Size(75, 23);
-            this.elec_search.TabIndex = 3;
+            this.elec_search.TabIndex = 4;
             this.elec_search.Text = "Найти";
             this.elec_search.UseVisualStyleBackColor = true;
             this.elec_search.Click += new System.EventHandler(this.elec_search_Click);
@@ -255,16 +339,19 @@
             this.elec_otpr.Size = new System.Drawing.Size(100, 20);
             this.elec_otpr.TabIndex = 1;
             // 
-            // webBrowser1
+            // pictureBox13
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(5, 100);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(650, 380);
-            this.webBrowser1.TabIndex = 4;
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(667, 487);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 25;
+            this.pictureBox13.TabStop = false;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.listBox2);
             this.tabPage2.Controls.Add(this.pictureBox6);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.train_data);
@@ -273,7 +360,6 @@
             this.tabPage2.Controls.Add(this.train_nazn);
             this.tabPage2.Controls.Add(this.train_otpr);
             this.tabPage2.Controls.Add(this.train_search);
-            this.tabPage2.Controls.Add(this.webBrowser2);
             this.tabPage2.Controls.Add(this.pictureBox12);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -282,6 +368,24 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Поезда";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(159, 164);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 95);
+            this.listBox2.TabIndex = 25;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Raspisanie_1.Properties.Resources.head;
+            this.pictureBox6.Location = new System.Drawing.Point(518, 6);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(139, 44);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 23;
+            this.pictureBox6.TabStop = false;
             // 
             // label7
             // 
@@ -297,7 +401,7 @@
             this.train_data.Location = new System.Drawing.Point(293, 29);
             this.train_data.Name = "train_data";
             this.train_data.Size = new System.Drawing.Size(100, 20);
-            this.train_data.TabIndex = 7;
+            this.train_data.TabIndex = 9;
             // 
             // label4
             // 
@@ -322,35 +426,38 @@
             this.train_nazn.Location = new System.Drawing.Point(159, 30);
             this.train_nazn.Name = "train_nazn";
             this.train_nazn.Size = new System.Drawing.Size(100, 20);
-            this.train_nazn.TabIndex = 6;
+            this.train_nazn.TabIndex = 8;
             // 
             // train_otpr
             // 
             this.train_otpr.Location = new System.Drawing.Point(30, 30);
             this.train_otpr.Name = "train_otpr";
             this.train_otpr.Size = new System.Drawing.Size(100, 20);
-            this.train_otpr.TabIndex = 5;
+            this.train_otpr.TabIndex = 7;
             // 
             // train_search
             // 
             this.train_search.Location = new System.Drawing.Point(433, 27);
             this.train_search.Name = "train_search";
             this.train_search.Size = new System.Drawing.Size(75, 23);
-            this.train_search.TabIndex = 8;
+            this.train_search.TabIndex = 10;
             this.train_search.Text = "Найти";
             this.train_search.UseVisualStyleBackColor = true;
             this.train_search.Click += new System.EventHandler(this.train_search_Click);
             // 
-            // webBrowser2
+            // pictureBox12
             // 
-            this.webBrowser2.Location = new System.Drawing.Point(5, 100);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(650, 380);
-            this.webBrowser2.TabIndex = 9;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(667, 487);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 24;
+            this.pictureBox12.TabStop = false;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.listBox3);
             this.tabPage3.Controls.Add(this.pictureBox5);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.avia_data);
@@ -359,7 +466,6 @@
             this.tabPage3.Controls.Add(this.avia_nazn);
             this.tabPage3.Controls.Add(this.avia_otpr);
             this.tabPage3.Controls.Add(this.avia_search);
-            this.tabPage3.Controls.Add(this.webBrowser3);
             this.tabPage3.Controls.Add(this.pictureBox11);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -368,6 +474,24 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Самолёты";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(43, 82);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(120, 95);
+            this.listBox3.TabIndex = 23;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(529, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(128, 69);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
             // 
             // label12
             // 
@@ -383,7 +507,7 @@
             this.avia_data.Location = new System.Drawing.Point(293, 29);
             this.avia_data.Name = "avia_data";
             this.avia_data.Size = new System.Drawing.Size(100, 20);
-            this.avia_data.TabIndex = 12;
+            this.avia_data.TabIndex = 14;
             // 
             // label13
             // 
@@ -408,32 +532,34 @@
             this.avia_nazn.Location = new System.Drawing.Point(159, 30);
             this.avia_nazn.Name = "avia_nazn";
             this.avia_nazn.Size = new System.Drawing.Size(100, 20);
-            this.avia_nazn.TabIndex = 11;
+            this.avia_nazn.TabIndex = 13;
             // 
             // avia_otpr
             // 
             this.avia_otpr.Location = new System.Drawing.Point(30, 30);
             this.avia_otpr.Name = "avia_otpr";
             this.avia_otpr.Size = new System.Drawing.Size(100, 20);
-            this.avia_otpr.TabIndex = 10;
+            this.avia_otpr.TabIndex = 12;
             // 
             // avia_search
             // 
             this.avia_search.Location = new System.Drawing.Point(433, 27);
             this.avia_search.Name = "avia_search";
             this.avia_search.Size = new System.Drawing.Size(75, 23);
-            this.avia_search.TabIndex = 13;
+            this.avia_search.TabIndex = 15;
             this.avia_search.Text = "Найти";
             this.avia_search.UseVisualStyleBackColor = true;
             this.avia_search.Click += new System.EventHandler(this.avia_search_Click);
             // 
-            // webBrowser3
+            // pictureBox11
             // 
-            this.webBrowser3.Location = new System.Drawing.Point(5, 100);
-            this.webBrowser3.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser3.Name = "webBrowser3";
-            this.webBrowser3.Size = new System.Drawing.Size(650, 380);
-            this.webBrowser3.TabIndex = 14;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(667, 487);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 21;
+            this.pictureBox11.TabStop = false;
             // 
             // label5
             // 
@@ -1023,66 +1149,6 @@
             this.timer3.Enabled = true;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Raspisanie_1.Properties.Resources.elec_form;
-            this.pictureBox7.Location = new System.Drawing.Point(511, 6);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(146, 45);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(667, 487);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 25;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Raspisanie_1.Properties.Resources.head;
-            this.pictureBox6.Location = new System.Drawing.Point(518, 6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(139, 44);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 23;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(667, 487);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 24;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(529, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(128, 69);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 22;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(667, 487);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 21;
-            this.pictureBox11.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(514, 0);
@@ -1146,12 +1212,24 @@
             this.pictureBox10.TabIndex = 23;
             this.pictureBox10.TabStop = false;
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(877, 10);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(79, 22);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox14.TabIndex = 21;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(927, 606);
+            this.ClientSize = new System.Drawing.Size(975, 634);
+            this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.hour_on);
@@ -1170,21 +1248,21 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minute_on)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hour_on)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1192,6 +1270,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1207,15 +1286,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox elec_nazn;
         private System.Windows.Forms.TextBox elec_otpr;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button elec_search;
-        private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox train_nazn;
         private System.Windows.Forms.TextBox train_otpr;
         private System.Windows.Forms.Button train_search;
-        private System.Windows.Forms.WebBrowser webBrowser3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox train_data;
         private System.Windows.Forms.Label label12;
@@ -1312,6 +1388,17 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ListView listView1;
 
     }
 }
