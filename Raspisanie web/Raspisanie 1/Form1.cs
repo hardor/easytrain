@@ -8,11 +8,12 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
+
+
 namespace Raspisanie
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
@@ -35,18 +36,24 @@ namespace Raspisanie
 
         private void elec_search_Click(object sender, EventArgs e)
         {
-            webBrowser1.Navigate("http://rasp.yandex.ru/search/suburban/?fromName=" + elec_otpr.Text + "&fromId=&toName=" + elec_nazn.Text + "&&toId=&when=" + elec_data.Text);
+
+            listViewZapolnenie lz = new listViewZapolnenie();
+            lz.lists(listView1, label32,elec_otpr,elec_nazn,elec_data);
 
         }
         private void train_search_Click(object sender, EventArgs e)
         {
-            webBrowser2.Navigate(" http://rasp.yandex.ru/search/train/?fromName=" + train_otpr.Text + "&fromId=&toName=" + train_nazn.Text + "&toId=&when=" + train_data.Text);
+            parse parse_tr = new parse();
+            string s_tr = parse_tr.list(" http://rasp.yandex.ru/search/train/?fromName=" + train_otpr.Text + "&fromId=&toName=" + train_nazn.Text + "&toId=&when=" + train_data.Text);
+            listBox2.Items.Add(s_tr);
 
         }
 
         private void avia_search_Click(object sender, EventArgs e)
         {
-            webBrowser3.Navigate("http://rasp.yandex.ru/search/plane/?fromName=" + avia_otpr.Text + "&fromId=&toName=" + avia_nazn.Text + "&toId=&when=" + avia_data.Text);
+            parse parse_av = new parse();
+            string s_av = parse_av.list(" http://rasp.yandex.ru/search/plane/?fromName=" + avia_otpr.Text + "&fromId=&toName=" + avia_nazn.Text + "&toId=&when=" + avia_data.Text);
+            listBox3.Items.Add(s_av);
         }
 
 
@@ -95,7 +102,7 @@ namespace Raspisanie
             DateTime curr_time = DateTime.Now;
             if (alarm_on_ch.Checked == true)
             {
-               // if ((curr_time.Hour == hour_on.Value) && (curr_time.Minute == minute_on.Value) && (curr_time.Second == 0))
+                 if ((curr_time.Hour == hour_on.Value) && (curr_time.Minute == minute_on.Value) && (curr_time.Second == 0))
                 {
                     alarm_on_ch.Checked = false;
                     Form2 napomin = new Form2();
@@ -153,6 +160,12 @@ namespace Raspisanie
             }
 
         }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Караваны успешно ограблены");
+        }
+
 
 
     }
