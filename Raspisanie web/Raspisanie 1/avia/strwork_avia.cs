@@ -15,7 +15,7 @@ namespace Raspisanie
 {
 
 
-    public class strwork_elec
+    public class strwork_avia
     {
         int[] begin_reis = new int[100], sered_reis = new int[100], end_reis = new int[100];
         int[] begin_otpr = new int[100], end_otpr = new int[100];

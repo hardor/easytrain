@@ -12,13 +12,13 @@ using Microsoft.Win32;
 
 namespace Raspisanie
 {
-    class listViewZapolnenie
+    class listViewZapolnenie_avia
     {
-        strwork_elec el_str = new strwork_elec();
+        strwork_avia avia_str = new strwork_avia();
 
-        public void lists(ListView listView1, Label label, TextBox elec_otpr, TextBox elec_nazn, TextBox elec_data)
+        public void lists(ListView listView3, Label label, TextBox avia_otpr, TextBox avia_nazn, TextBox avia_data)
         {
-            listView1.Items.Clear();
+            listView3.Items.Clear();
 
             ListViewItem lv1 = new ListViewItem();
             ListViewItem.ListViewSubItem lv2;
@@ -27,7 +27,7 @@ namespace Raspisanie
             ListViewItem.ListViewSubItem lv5;
             ListViewItem.ListViewSubItem lv6;
             label.Visible = true;
-            label.Text = el_str.zagolovok(elec_otpr.Text, elec_nazn.Text, elec_data.Text);
+            label.Text = avia_str.zagolovok(avia_otpr.Text, avia_nazn.Text, avia_data.Text);
 
 
             int end;
@@ -41,9 +41,9 @@ namespace Raspisanie
                 lv6 = new ListViewItem.ListViewSubItem();
 
                 lv1.Text = Convert.ToString(end);
-                lv2.Text = el_str.table(1, end, elec_otpr.Text, elec_nazn.Text, elec_data.Text);
-                lv3.Text = el_str.table(2, end, elec_otpr.Text, elec_nazn.Text, elec_data.Text);
-                lv4.Text = el_str.table(3, end, elec_otpr.Text, elec_nazn.Text, elec_data.Text);
+                lv2.Text = avia_str.table(1, end, avia_otpr.Text, avia_nazn.Text, avia_data.Text);
+                lv3.Text = avia_str.table(2, end, avia_otpr.Text, avia_nazn.Text, avia_data.Text);
+                lv4.Text = avia_str.table(3, end, avia_otpr.Text, avia_nazn.Text, avia_data.Text);
 
                 //lv5.Text = Convert.ToString(Convert.ToDouble(lv4.Text) - Convert.ToDouble(lv3.Text));
                 lv6.Text = "Все";
@@ -55,7 +55,7 @@ namespace Raspisanie
                 lv1.SubItems.Add(lv5);
                 lv1.SubItems.Add(lv6);
 
-                listView1.Items.Add(lv1);
+                listView3.Items.Add(lv1);
             }
         }
     }

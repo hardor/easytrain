@@ -61,7 +61,6 @@
             this.train_search = new System.Windows.Forms.Button();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listBox3 = new System.Windows.Forms.ListBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.avia_data = new System.Windows.Forms.TextBox();
@@ -151,6 +150,13 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -457,7 +463,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.listBox3);
+            this.tabPage3.Controls.Add(this.listView3);
             this.tabPage3.Controls.Add(this.pictureBox5);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.avia_data);
@@ -474,14 +480,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Самолёты";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(43, 82);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(120, 95);
-            this.listBox3.TabIndex = 23;
             // 
             // pictureBox5
             // 
@@ -1223,6 +1221,57 @@
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
+            // listView3
+            // 
+            this.listView3.BackColor = System.Drawing.SystemColors.Info;
+            this.listView3.CheckBoxes = true;
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            this.listView3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.listView3.GridLines = true;
+            this.listView3.Location = new System.Drawing.Point(21, 81);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(570, 370);
+            this.listView3.TabIndex = 23;
+            this.listView3.TileSize = new System.Drawing.Size(170, 40);
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "№";
+            this.columnHeader6.Width = 40;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Рейсы";
+            this.columnHeader8.Width = 160;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Отправление";
+            this.columnHeader9.Width = 90;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Прибытие";
+            this.columnHeader10.Width = 90;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "В пути";
+            this.columnHeader11.Width = 90;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Цена";
+            this.columnHeader12.Width = 90;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1389,7 +1438,6 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -1399,6 +1447,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
 
     }
 }
