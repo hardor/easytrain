@@ -36,9 +36,13 @@ namespace Raspisanie
 
         private void elec_search_Click(object sender, EventArgs e)
         {
+            strwork_elec lz = new strwork_elec();
+            lz.table(listView1, elec_otpr.Text, elec_nazn.Text, elec_data.Text);
 
-            listViewZapolnenie lz = new listViewZapolnenie();
-            lz.lists(listView1, label32,elec_otpr,elec_nazn,elec_data);
+            label32.Visible = true;
+            label32.Text = lz.zagolovok(elec_otpr.Text, elec_nazn.Text, elec_data.Text);
+
+            
 
         }
         private void train_search_Click(object sender, EventArgs e)
@@ -53,7 +57,7 @@ namespace Raspisanie
         {
             parse parse_av = new parse();
             string s_av = parse_av.list(" http://rasp.yandex.ru/search/plane/?fromName=" + avia_otpr.Text + "&fromId=&toName=" + avia_nazn.Text + "&toId=&when=" + avia_data.Text);
-            listBox3.Items.Add(s_av);
+            //listBox3.Items.Add(s_av);
         }
 
 
