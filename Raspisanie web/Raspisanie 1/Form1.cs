@@ -36,28 +36,61 @@ namespace Raspisanie
 
         private void elec_search_Click(object sender, EventArgs e)
         {
-            strwork_elec lz = new strwork_elec();
-            lz.table(listView1, elec_otpr.Text, elec_nazn.Text, elec_data.Text);
+            if ((elec_otpr.Text == "") || (elec_nazn.Text == ""))
+            {
+                MessageBox.Show("введите станции");
+            }
+            else
+            {
+                listView1.Items.Clear();
+                strwork_elec el = new strwork_elec();
+                label32.Visible = true;
+                label32.Text = el.zagolovok(elec_otpr.Text, elec_nazn.Text, elec_data.Text);
+                if (label32.Text != "Нет информации")
+                {
 
-            label32.Visible = true;
-            label32.Text = lz.zagolovok(elec_otpr.Text, elec_nazn.Text, elec_data.Text);
+                    el.table(listView1, elec_otpr.Text, elec_nazn.Text, elec_data.Text);
+                }
 
-            
-
+            }
         }
         private void train_search_Click(object sender, EventArgs e)
         {
-            parse parse_tr = new parse();
-            string s_tr = parse_tr.list(" http://rasp.yandex.ru/search/train/?fromName=" + train_otpr.Text + "&fromId=&toName=" + train_nazn.Text + "&toId=&when=" + train_data.Text);
-            listBox2.Items.Add(s_tr);
+            if ((train_otpr.Text == "") || (train_nazn.Text == ""))
+            {
+                MessageBox.Show("введите станции");
+            }
+            else
+            {
+                listView2.Items.Clear();
+                strwork_train ек = new strwork_train();
+                label34.Visible = true;
+                label34.Text = ек.zagolovok(train_otpr.Text, train_nazn.Text, train_data.Text);
+                if (label34.Text != "Нет информации")
+                {
+                    ек.table(listView2, train_otpr.Text, train_nazn.Text, train_data.Text);
+                }
 
+            }
         }
 
         private void avia_search_Click(object sender, EventArgs e)
         {
-            parse parse_av = new parse();
-            string s_av = parse_av.list(" http://rasp.yandex.ru/search/plane/?fromName=" + avia_otpr.Text + "&fromId=&toName=" + avia_nazn.Text + "&toId=&when=" + avia_data.Text);
-            //listBox3.Items.Add(s_av);
+            if ((avia_otpr.Text == "") || (avia_nazn.Text == ""))
+            {
+                MessageBox.Show("введите станции");
+            }
+            else
+            {
+                listView3.Items.Clear();
+                strwork_avia ava = new strwork_avia();
+                label33.Visible = true;
+                label33.Text = ava.zagolovok(avia_otpr.Text, avia_nazn.Text, avia_data.Text);
+                if (label34.Text != "Нет информации")
+                {
+                    ava.table(listView3, avia_otpr.Text, avia_nazn.Text, avia_data.Text);
+                }
+            }
         }
 
 
@@ -71,12 +104,7 @@ namespace Raspisanie
         }
 
 
-        private void notifyIcon2_MouseClick(object sender, MouseEventArgs e)
-        {
-            notifyIcon2.ShowBalloonTip(5000, "Расписание", "Близжайшая электричка с\n" + elec_otpr.Text + "до" + elec_nazn.Text, ToolTipIcon.Info);
-        }
-
-
+       
         private void notifyIcon2_MouseDoubleClick_1(object sender, MouseEventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
@@ -106,7 +134,7 @@ namespace Raspisanie
             DateTime curr_time = DateTime.Now;
             if (alarm_on_ch.Checked == true)
             {
-                 if ((curr_time.Hour == hour_on.Value) && (curr_time.Minute == minute_on.Value) && (curr_time.Second == 0))
+                if ((curr_time.Hour == hour_on.Value) && (curr_time.Minute == minute_on.Value) && (curr_time.Second == 0))
                 {
                     alarm_on_ch.Checked = false;
                     Form2 napomin = new Form2();
@@ -169,8 +197,6 @@ namespace Raspisanie
         {
             MessageBox.Show("Караваны успешно ограблены");
         }
-
-
 
     }
 }

@@ -38,7 +38,6 @@
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.label30 = new System.Windows.Forms.Label();
             this.elec_data = new System.Windows.Forms.TextBox();
@@ -50,7 +49,12 @@
             this.elec_otpr = new System.Windows.Forms.TextBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader15 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader16 = new System.Windows.Forms.ColumnHeader();
+            this.label34 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.train_data = new System.Windows.Forms.TextBox();
@@ -61,6 +65,12 @@
             this.train_search = new System.Windows.Forms.Button();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label33 = new System.Windows.Forms.Label();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.avia_data = new System.Windows.Forms.TextBox();
@@ -87,11 +97,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.webBrowser5 = new System.Windows.Forms.WebBrowser();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.zvukoff = new System.Windows.Forms.Button();
-            this.zvukon = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.hour_on = new System.Windows.Forms.NumericUpDown();
+            this.minute_on = new System.Windows.Forms.NumericUpDown();
+            this.alarm_on_ch = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -135,9 +146,6 @@
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.time = new System.Windows.Forms.TextBox();
-            this.alarm_on_ch = new System.Windows.Forms.CheckBox();
-            this.minute_on = new System.Windows.Forms.NumericUpDown();
-            this.hour_on = new System.Windows.Forms.NumericUpDown();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label31 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -150,13 +158,6 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -167,10 +168,9 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.minute_on)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hour_on)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minute_on)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -218,7 +218,7 @@
             this.label32.AutoEllipsis = true;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(27, 84);
+            this.label32.Location = new System.Drawing.Point(20, 60);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(19, 13);
             this.label32.TabIndex = 28;
@@ -235,13 +235,12 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4,
             this.columnHeader5});
             this.listView1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(30, 100);
+            this.listView1.Location = new System.Drawing.Point(20, 80);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(570, 370);
+            this.listView1.Size = new System.Drawing.Size(620, 380);
             this.listView1.TabIndex = 5;
             this.listView1.TileSize = new System.Drawing.Size(170, 40);
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -260,22 +259,17 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Отправление";
-            this.columnHeader2.Width = 90;
+            this.columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Прибытие";
-            this.columnHeader3.Width = 90;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "В пути";
-            this.columnHeader4.Width = 90;
+            this.columnHeader3.Width = 150;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Остановки";
-            this.columnHeader5.Width = 90;
+            this.columnHeader5.Width = 500;
             // 
             // label30
             // 
@@ -295,7 +289,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::Raspisanie_1.Properties.Resources.elec_form;
+            this.pictureBox7.Image = global::Raspisanie_1.Properties.Resources.elec_form1;
             this.pictureBox7.Location = new System.Drawing.Point(511, 6);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(146, 45);
@@ -357,7 +351,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.listBox2);
+            this.tabPage2.Controls.Add(this.listView2);
+            this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.pictureBox6);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.train_data);
@@ -375,17 +370,61 @@
             this.tabPage2.Text = "Поезда";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // listBox2
+            // listView2
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(159, 164);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 95);
-            this.listBox2.TabIndex = 25;
+            this.listView2.BackColor = System.Drawing.SystemColors.Info;
+            this.listView2.CheckBoxes = true;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16});
+            this.listView2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(20, 80);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(620, 380);
+            this.listView2.TabIndex = 30;
+            this.listView2.TileSize = new System.Drawing.Size(170, 40);
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "№";
+            this.columnHeader13.Width = 40;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Рейсы";
+            this.columnHeader14.Width = 160;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Отправление";
+            this.columnHeader15.Width = 150;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Прибытие";
+            this.columnHeader16.Width = 150;
+            // 
+            // label34
+            // 
+            this.label34.AutoEllipsis = true;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Location = new System.Drawing.Point(20, 60);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(19, 13);
+            this.label34.TabIndex = 29;
+            this.label34.Text = "    ";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label34.Visible = false;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Raspisanie_1.Properties.Resources.head;
+            this.pictureBox6.Image = global::Raspisanie_1.Properties.Resources.head1;
             this.pictureBox6.Location = new System.Drawing.Point(518, 6);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(139, 44);
@@ -463,6 +502,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label33);
             this.tabPage3.Controls.Add(this.listView3);
             this.tabPage3.Controls.Add(this.pictureBox5);
             this.tabPage3.Controls.Add(this.label12);
@@ -480,6 +520,58 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Самолёты";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoEllipsis = true;
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(20, 60);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(19, 13);
+            this.label33.TabIndex = 29;
+            this.label33.Text = "    ";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label33.Visible = false;
+            // 
+            // listView3
+            // 
+            this.listView3.BackColor = System.Drawing.SystemColors.Info;
+            this.listView3.CheckBoxes = true;
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.listView3.GridLines = true;
+            this.listView3.Location = new System.Drawing.Point(20, 80);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(620, 380);
+            this.listView3.TabIndex = 23;
+            this.listView3.TileSize = new System.Drawing.Size(170, 40);
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "№";
+            this.columnHeader6.Width = 40;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Рейсы";
+            this.columnHeader8.Width = 160;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Отправление";
+            this.columnHeader9.Width = 150;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Прибытие";
+            this.columnHeader10.Width = 150;
             // 
             // pictureBox5
             // 
@@ -691,61 +783,67 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(712, 45);
+            this.monthCalendar1.Location = new System.Drawing.Point(731, 56);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
-            // zvukoff
-            // 
-            this.zvukoff.Location = new System.Drawing.Point(28, 63);
-            this.zvukoff.Name = "zvukoff";
-            this.zvukoff.Size = new System.Drawing.Size(75, 23);
-            this.zvukoff.TabIndex = 2;
-            this.zvukoff.Text = "тише";
-            this.zvukoff.UseVisualStyleBackColor = true;
-            this.zvukoff.Click += new System.EventHandler(this.zvukoff_Click);
-            // 
-            // zvukon
-            // 
-            this.zvukon.Location = new System.Drawing.Point(28, 19);
-            this.zvukon.Name = "zvukon";
-            this.zvukon.Size = new System.Drawing.Size(75, 23);
-            this.zvukon.TabIndex = 3;
-            this.zvukon.Text = "громче";
-            this.zvukon.UseVisualStyleBackColor = true;
-            this.zvukon.Click += new System.EventHandler(this.zvukon_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.zvukon);
-            this.groupBox1.Controls.Add(this.zvukoff);
-            this.groupBox1.Location = new System.Drawing.Point(712, 232);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(128, 103);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Звук";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label35);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(712, 413);
+            this.groupBox2.Controls.Add(this.hour_on);
+            this.groupBox2.Controls.Add(this.minute_on);
+            this.groupBox2.Controls.Add(this.alarm_on_ch);
+            this.groupBox2.Location = new System.Drawing.Point(712, 255);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(120, 63);
+            this.groupBox2.Size = new System.Drawing.Size(203, 115);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "music";
+            this.groupBox2.Text = "Напомнить";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(16, 31);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(31, 13);
+            this.label35.TabIndex = 19;
+            this.label35.Text = "Звук";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 30);
+            this.checkBox1.Location = new System.Drawing.Point(149, 31);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "включить";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 16;
             this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // hour_on
+            // 
+            this.hour_on.Location = new System.Drawing.Point(16, 67);
+            this.hour_on.Name = "hour_on";
+            this.hour_on.Size = new System.Drawing.Size(50, 20);
+            this.hour_on.TabIndex = 17;
+            this.hour_on.ValueChanged += new System.EventHandler(this.hour_on_ValueChanged);
+            // 
+            // minute_on
+            // 
+            this.minute_on.Location = new System.Drawing.Point(81, 67);
+            this.minute_on.Name = "minute_on";
+            this.minute_on.Size = new System.Drawing.Size(50, 20);
+            this.minute_on.TabIndex = 18;
+            this.minute_on.ValueChanged += new System.EventHandler(this.minute_on_ValueChanged);
+            // 
+            // alarm_on_ch
+            // 
+            this.alarm_on_ch.AutoSize = true;
+            this.alarm_on_ch.Location = new System.Drawing.Point(149, 70);
+            this.alarm_on_ch.Name = "alarm_on_ch";
+            this.alarm_on_ch.Size = new System.Drawing.Size(15, 14);
+            this.alarm_on_ch.TabIndex = 19;
+            this.alarm_on_ch.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -1076,7 +1174,6 @@
             // 
             this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
             this.notifyIcon2.Text = "easytrain";
-            this.notifyIcon2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon2_MouseClick);
             this.notifyIcon2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon2_MouseDoubleClick_1);
             // 
             // timer1
@@ -1091,32 +1188,6 @@
             this.time.Size = new System.Drawing.Size(100, 20);
             this.time.TabIndex = 9;
             // 
-            // alarm_on_ch
-            // 
-            this.alarm_on_ch.AutoSize = true;
-            this.alarm_on_ch.Location = new System.Drawing.Point(838, 483);
-            this.alarm_on_ch.Name = "alarm_on_ch";
-            this.alarm_on_ch.Size = new System.Drawing.Size(44, 17);
-            this.alarm_on_ch.TabIndex = 11;
-            this.alarm_on_ch.Text = "вкл";
-            this.alarm_on_ch.UseVisualStyleBackColor = true;
-            // 
-            // minute_on
-            // 
-            this.minute_on.Location = new System.Drawing.Point(779, 480);
-            this.minute_on.Name = "minute_on";
-            this.minute_on.Size = new System.Drawing.Size(53, 20);
-            this.minute_on.TabIndex = 17;
-            this.minute_on.ValueChanged += new System.EventHandler(this.minute_on_ValueChanged);
-            // 
-            // hour_on
-            // 
-            this.hour_on.Location = new System.Drawing.Point(712, 480);
-            this.hour_on.Name = "hour_on";
-            this.hour_on.Size = new System.Drawing.Size(61, 20);
-            this.hour_on.TabIndex = 18;
-            this.hour_on.ValueChanged += new System.EventHandler(this.hour_on_ValueChanged);
-            // 
             // timer2
             // 
             this.timer2.Enabled = true;
@@ -1126,7 +1197,7 @@
             // 
             this.label31.AutoEllipsis = true;
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(874, 580);
+            this.label31.Location = new System.Drawing.Point(820, 516);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(41, 13);
             this.label31.TabIndex = 19;
@@ -1134,7 +1205,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(793, 575);
+            this.button8.Location = new System.Drawing.Point(712, 511);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 20;
@@ -1221,72 +1292,17 @@
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
-            // listView3
-            // 
-            this.listView3.BackColor = System.Drawing.SystemColors.Info;
-            this.listView3.CheckBoxes = true;
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            this.listView3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.listView3.GridLines = true;
-            this.listView3.Location = new System.Drawing.Point(21, 81);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(570, 370);
-            this.listView3.TabIndex = 23;
-            this.listView3.TileSize = new System.Drawing.Size(170, 40);
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "№";
-            this.columnHeader6.Width = 40;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Рейсы";
-            this.columnHeader8.Width = 160;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Отправление";
-            this.columnHeader9.Width = 90;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Прибытие";
-            this.columnHeader10.Width = 90;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "В пути";
-            this.columnHeader11.Width = 90;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Цена";
-            this.columnHeader12.Width = 90;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(975, 634);
+            this.ClientSize = new System.Drawing.Size(962, 616);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.hour_on);
-            this.Controls.Add(this.minute_on);
-            this.Controls.Add(this.alarm_on_ch);
             this.Controls.Add(this.time);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.tabControl1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1307,11 +1323,10 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.minute_on)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hour_on)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minute_on)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1371,9 +1386,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button zvukoff;
-        private System.Windows.Forms.Button zvukon;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox elec_data;
@@ -1437,12 +1449,10 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Label label32;
@@ -1452,8 +1462,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
 
     }
 }
