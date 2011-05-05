@@ -16,7 +16,7 @@ namespace Raspisanie
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();           
 
         }
 
@@ -192,10 +192,10 @@ namespace Raspisanie
             }
 
         }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
+        private void label36_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Караваны успешно ограблены");
+            Form4 spr = new Form4();           
+            spr.Show();
         }
 
     }
