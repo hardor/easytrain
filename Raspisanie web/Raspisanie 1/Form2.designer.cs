@@ -60,7 +60,6 @@
             this.Opacity = 0.8;
             this.Text = "Пора";
             this.TopMost = true;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.ResumeLayout(false);
 
         }
