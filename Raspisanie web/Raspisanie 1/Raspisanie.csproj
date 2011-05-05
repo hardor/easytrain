@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="avia\listview_avia.cs" />
+    <Compile Include="avia\strwork_avia.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,14 +103,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="electron\strwork_elec.cs" />
+    <Compile Include="train\strwork_train.cs" />
     <Compile Include="Zvuk.cs" />
-    <Compile Include="avia\strwork_avia.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\elec_form.gif" />
+    <None Include="Resources\head.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\head.gif" />
+    <None Include="Resources\elec_form.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

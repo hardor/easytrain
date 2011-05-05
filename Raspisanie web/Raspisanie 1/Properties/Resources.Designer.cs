@@ -60,16 +60,16 @@ namespace Raspisanie_1.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap elec_form {
+        internal static System.Drawing.Bitmap elec_form1 {
             get {
-                object obj = ResourceManager.GetObject("elec_form", resourceCulture);
+                object obj = ResourceManager.GetObject("elec_form1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap head {
+        internal static System.Drawing.Bitmap head1 {
             get {
-                object obj = ResourceManager.GetObject("head", resourceCulture);
+                object obj = ResourceManager.GetObject("head1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
