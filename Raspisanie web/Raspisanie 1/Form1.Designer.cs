@@ -157,7 +157,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -178,7 +178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1281,16 +1280,15 @@
             this.pictureBox10.TabIndex = 23;
             this.pictureBox10.TabStop = false;
             // 
-            // pictureBox14
+            // label36
             // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(877, 10);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(79, 22);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox14.TabIndex = 21;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(877, 15);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(73, 13);
+            this.label36.TabIndex = 22;
+            this.label36.Text = "о программе";
+            this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
             // Form1
             // 
@@ -1298,7 +1296,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(962, 616);
-            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.time);
@@ -1334,7 +1332,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1449,7 +1446,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -1470,6 +1466,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
 
     }
 }
