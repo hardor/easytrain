@@ -14,15 +14,13 @@ namespace Raspisanie
         {
             InitializeComponent();
         }
-        Music music2 = new Music();
+        
 
         private void label1_Click(object sender, EventArgs e)
-        {           
-            Close();   
-        }
-
-        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
+
+            Close();
+            Music music2 = new Music();
             music2.music_off();
         }
         
