@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label37 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
@@ -49,6 +55,8 @@
             this.elec_otpr = new System.Windows.Forms.TextBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
@@ -65,6 +73,8 @@
             this.train_search = new System.Windows.Forms.Button();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
             this.label33 = new System.Windows.Forms.Label();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
@@ -98,6 +108,7 @@
             this.webBrowser5 = new System.Windows.Forms.WebBrowser();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.hour_on = new System.Windows.Forms.NumericUpDown();
@@ -144,6 +155,10 @@
             this.button7 = new System.Windows.Forms.Button();
             this.webBrowser10 = new System.Windows.Forms.WebBrowser();
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.time = new System.Windows.Forms.TextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -158,8 +173,16 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.кенкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.кеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -171,6 +194,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hour_on)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minute_on)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -178,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -193,6 +218,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.listBox2);
+            this.tabPage1.Controls.Add(this.numericUpDown1);
+            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.checkBox2);
+            this.tabPage1.Controls.Add(this.label37);
             this.tabPage1.Controls.Add(this.label32);
             this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.label30);
@@ -211,6 +241,62 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Электрички";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(159, 56);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 95);
+            this.listBox2.TabIndex = 31;
+            this.listBox2.Visible = false;
+            this.listBox2.Click += new System.EventHandler(this.listBox2_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(16, 553);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(207, 23);
+            this.button9.TabIndex = 24;
+            this.button9.Text = "Очистить историю после закрытия";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(482, 461);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDown1.TabIndex = 20;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(30, 56);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 23;
+            this.listBox1.Visible = false;
+            this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Enabled = false;
+            this.checkBox2.Location = new System.Drawing.Point(538, 463);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 30;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(310, 465);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(166, 13);
+            this.label37.TabIndex = 29;
+            this.label37.Text = "Обновлять через каждые (мин)";
             // 
             // label32
             // 
@@ -244,6 +330,7 @@
             this.listView1.TileSize = new System.Drawing.Size(170, 40);
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listView1_ItemCheck);
             // 
             // columnHeader7
             // 
@@ -298,7 +385,7 @@
             // 
             // elec_search
             // 
-            this.elec_search.Location = new System.Drawing.Point(433, 27);
+            this.elec_search.Location = new System.Drawing.Point(401, 27);
             this.elec_search.Name = "elec_search";
             this.elec_search.Size = new System.Drawing.Size(75, 23);
             this.elec_search.TabIndex = 4;
@@ -330,6 +417,7 @@
             this.elec_nazn.Name = "elec_nazn";
             this.elec_nazn.Size = new System.Drawing.Size(100, 20);
             this.elec_nazn.TabIndex = 2;
+            this.elec_nazn.DoubleClick += new System.EventHandler(this.elec_nazn_DoubleClick);
             // 
             // elec_otpr
             // 
@@ -337,11 +425,12 @@
             this.elec_otpr.Name = "elec_otpr";
             this.elec_otpr.Size = new System.Drawing.Size(100, 20);
             this.elec_otpr.TabIndex = 1;
+            this.elec_otpr.DoubleClick += new System.EventHandler(this.elec_otpr_DoubleClick);
             // 
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox13.Location = new System.Drawing.Point(-7, 3);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(667, 487);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -350,6 +439,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.listBox4);
+            this.tabPage2.Controls.Add(this.listBox3);
             this.tabPage2.Controls.Add(this.listView2);
             this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.pictureBox6);
@@ -368,6 +459,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Поезда";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(159, 56);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(120, 95);
+            this.listBox4.TabIndex = 32;
+            this.listBox4.Visible = false;
+            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(30, 56);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(120, 95);
+            this.listBox3.TabIndex = 31;
+            this.listBox3.Visible = false;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // listView2
             // 
@@ -471,6 +582,7 @@
             this.train_nazn.Name = "train_nazn";
             this.train_nazn.Size = new System.Drawing.Size(100, 20);
             this.train_nazn.TabIndex = 8;
+            this.train_nazn.DoubleClick += new System.EventHandler(this.train_nazn_DoubleClick);
             // 
             // train_otpr
             // 
@@ -478,6 +590,7 @@
             this.train_otpr.Name = "train_otpr";
             this.train_otpr.Size = new System.Drawing.Size(100, 20);
             this.train_otpr.TabIndex = 7;
+            this.train_otpr.DoubleClick += new System.EventHandler(this.train_otpr_DoubleClick);
             // 
             // train_search
             // 
@@ -501,6 +614,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.listBox6);
+            this.tabPage3.Controls.Add(this.listBox5);
             this.tabPage3.Controls.Add(this.label33);
             this.tabPage3.Controls.Add(this.listView3);
             this.tabPage3.Controls.Add(this.pictureBox5);
@@ -519,6 +634,26 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Самолёты";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // listBox6
+            // 
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.Location = new System.Drawing.Point(159, 56);
+            this.listBox6.Name = "listBox6";
+            this.listBox6.Size = new System.Drawing.Size(120, 95);
+            this.listBox6.TabIndex = 31;
+            this.listBox6.Visible = false;
+            this.listBox6.SelectedIndexChanged += new System.EventHandler(this.listBox6_SelectedIndexChanged);
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Location = new System.Drawing.Point(30, 56);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(120, 95);
+            this.listBox5.TabIndex = 30;
+            this.listBox5.Visible = false;
+            this.listBox5.SelectedIndexChanged += new System.EventHandler(this.listBox5_SelectedIndexChanged);
             // 
             // label33
             // 
@@ -622,6 +757,7 @@
             this.avia_nazn.Name = "avia_nazn";
             this.avia_nazn.Size = new System.Drawing.Size(100, 20);
             this.avia_nazn.TabIndex = 13;
+            this.avia_nazn.DoubleClick += new System.EventHandler(this.avia_nazn_DoubleClick);
             // 
             // avia_otpr
             // 
@@ -629,6 +765,7 @@
             this.avia_otpr.Name = "avia_otpr";
             this.avia_otpr.Size = new System.Drawing.Size(100, 20);
             this.avia_otpr.TabIndex = 12;
+            this.avia_otpr.DoubleClick += new System.EventHandler(this.avia_otpr_DoubleClick);
             // 
             // avia_search
             // 
@@ -789,6 +926,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label38);
             this.groupBox2.Controls.Add(this.label35);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.hour_on);
@@ -801,14 +939,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Напомнить";
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(19, 70);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(73, 13);
+            this.label38.TabIndex = 20;
+            this.label38.Text = "Напомнить в";
+            // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(16, 31);
+            this.label35.Location = new System.Drawing.Point(16, 32);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(31, 13);
+            this.label35.Size = new System.Drawing.Size(82, 13);
             this.label35.TabIndex = 19;
-            this.label35.Text = "Звук";
+            this.label35.Text = "Включить звук";
             // 
             // checkBox1
             // 
@@ -821,24 +968,26 @@
             // 
             // hour_on
             // 
-            this.hour_on.Location = new System.Drawing.Point(16, 67);
+            this.hour_on.Location = new System.Drawing.Point(19, 89);
             this.hour_on.Name = "hour_on";
             this.hour_on.Size = new System.Drawing.Size(50, 20);
             this.hour_on.TabIndex = 17;
+            this.hour_on.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.hour_on.ValueChanged += new System.EventHandler(this.hour_on_ValueChanged);
             // 
             // minute_on
             // 
-            this.minute_on.Location = new System.Drawing.Point(81, 67);
+            this.minute_on.Location = new System.Drawing.Point(78, 89);
             this.minute_on.Name = "minute_on";
             this.minute_on.Size = new System.Drawing.Size(50, 20);
             this.minute_on.TabIndex = 18;
+            this.minute_on.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.minute_on.ValueChanged += new System.EventHandler(this.minute_on_ValueChanged);
             // 
             // alarm_on_ch
             // 
             this.alarm_on_ch.AutoSize = true;
-            this.alarm_on_ch.Location = new System.Drawing.Point(149, 70);
+            this.alarm_on_ch.Location = new System.Drawing.Point(149, 91);
             this.alarm_on_ch.Name = "alarm_on_ch";
             this.alarm_on_ch.Size = new System.Drawing.Size(15, 14);
             this.alarm_on_ch.TabIndex = 19;
@@ -1171,9 +1320,42 @@
             // 
             // notifyIcon2
             // 
+            this.notifyIcon2.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon2.BalloonTipTitle = "EasyTrain";
+            this.notifyIcon2.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
             this.notifyIcon2.Text = "easytrain";
             this.notifyIcon2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon2_MouseDoubleClick_1);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.открытьToolStripMenuItem,
+            this.выходToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(163, 70);
+            // 
+            // открытьToolStripMenuItem
+            // 
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.открытьToolStripMenuItem.Text = "Открыть";
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.оПрограммеToolStripMenuItem.Text = "О программе(?)";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -1182,10 +1364,11 @@
             // 
             // time
             // 
-            this.time.Location = new System.Drawing.Point(740, 12);
+            this.time.Location = new System.Drawing.Point(825, 15);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(100, 20);
+            this.time.Size = new System.Drawing.Size(70, 20);
             this.time.TabIndex = 9;
+            this.time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timer2
             // 
@@ -1208,7 +1391,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 20;
-            this.button8.Text = "Autorun";
+            this.button8.Text = "Автозапуск";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -1283,12 +1466,64 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(877, 15);
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(866, 594);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(73, 13);
+            this.label36.Size = new System.Drawing.Size(84, 13);
             this.label36.TabIndex = 22;
             this.label36.Text = "о программе";
             this.label36.Click += new System.EventHandler(this.label36_Click);
+            // 
+            // timer4
+            // 
+            this.timer4.Enabled = true;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // кенкToolStripMenuItem
+            // 
+            this.кенкToolStripMenuItem.Name = "кенкToolStripMenuItem";
+            this.кенкToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // кеToolStripMenuItem
+            // 
+            this.кеToolStripMenuItem.Name = "кеToolStripMenuItem";
+            this.кеToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // eToolStripMenuItem
+            // 
+            this.eToolStripMenuItem.Name = "eToolStripMenuItem";
+            this.eToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(709, 18);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(87, 13);
+            this.label39.TabIndex = 23;
+            this.label39.Text = "Текущее время";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(728, 378);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(108, 13);
+            this.label40.TabIndex = 21;
+            this.label40.Text = "Напомнить за (мин)";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(845, 378);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDown2.TabIndex = 22;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             // 
             // Form1
             // 
@@ -1296,21 +1531,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(962, 616);
-            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
+            this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.time);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label39);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.time);
             this.Controls.Add(this.tabControl1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "EasyTrain";
             this.Deactivate += new System.EventHandler(this.Form1_Deactivate_1);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -1325,6 +1566,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hour_on)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minute_on)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1332,6 +1574,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1467,6 +1710,28 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem кенкToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem кеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ListBox listBox5;
 
     }
 }

@@ -9,3 +9,4 @@ C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Pro
 C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Raspisanie 1\Raspisanie 1\obj\Debug\Raspisanie 1.exe
 C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Raspisanie 1\Raspisanie 1\obj\Debug\Raspisanie 1.pdb
 C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Raspisanie 1\Raspisanie 1\obj\Debug\Raspisanie.Form4.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Raspisanie 1\Raspisanie 1\obj\Debug\Raspisanie.mini_elec.resources
