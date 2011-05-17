@@ -37,9 +37,9 @@ namespace Raspisanie
             this.chkRun.AutoSize = true;
             this.chkRun.Location = new System.Drawing.Point(12, 12);
             this.chkRun.Name = "chkRun";
-            this.chkRun.Size = new System.Drawing.Size(93, 17);
+            this.chkRun.Size = new System.Drawing.Size(136, 17);
             this.chkRun.TabIndex = 0;
-            this.chkRun.Text = "Run at startup";
+            this.chkRun.Text = "запускать при старте";
             // 
             // btnOk
             // 
@@ -61,7 +61,7 @@ namespace Raspisanie
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form3";
-            this.Text = "Run At Startup";
+            this.Text = "Автозапуск";
             this.ResumeLayout(false);
             this.PerformLayout();
 

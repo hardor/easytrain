@@ -6,24 +6,22 @@ namespace Raspisanie
 {
     public partial class Form3 : Form
     {
-        // The path to the key where Windows looks for startup applications
+        // путь к ключу, где Windows смотрит запуск приложений
         RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 
         public Form3()
         {
             InitializeComponent();
-            // Check to see the current state (running at startup or not)
+            // Проверяем текущее состояние (работает при запуске или нет)
             if (rkApp.GetValue("EasyTrain") == null)
             {
-                // The value doesn't exist, the application is not set to run at startup
+                // если значения не существует, приложение не настроен на запуск при старте
                 chkRun.Checked = false;
-                               
             }
             else
             {
-                // The value exists, the application is set to run at startup
+                // если значение существует, приложение устанавливается на запуск при загрузке
                 chkRun.Checked = true;
-
             }
         }
 
@@ -31,12 +29,12 @@ namespace Raspisanie
         {
             if (chkRun.Checked)
             {
-                // Add the value in the registry so that the application runs at startup
+                // Добавляем значение в реестр  чтобы приложение запускалось при запуске
                 rkApp.SetValue("EasyTrain", Application.ExecutablePath.ToString());
             }
             else
             {
-                // Remove the value from the registry so that the application doesn't start
+                // Удаляем значение из реестра чтобы приложение не запускалось при запуске
                 rkApp.DeleteValue("EasyTrain", false);
             }
             Close(); 

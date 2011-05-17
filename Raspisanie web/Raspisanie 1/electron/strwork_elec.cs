@@ -16,14 +16,14 @@ namespace Raspisanie
 
     public class strwork_elec
     {
-        DateTime now_time = DateTime.Now;
+
 
         int[] begin_reis = new int[100], sered_reis = new int[100], end_reis = new int[100];
         int[] begin_otpr = new int[100], end_otpr = new int[100], otshet_otpr = new int[100];
         int[] begin_pr = new int[100], end_pr = new int[100], otshet_pr = new int[100];
         int[] begin_ost = new int[100], end_ost = new int[100];
 
-                ListViewItem lv1 = new ListViewItem();
+        ListViewItem lv1 = new ListViewItem();
         ListViewItem.ListViewSubItem lv2;
         ListViewItem.ListViewSubItem lv3;
         ListViewItem.ListViewSubItem lv4;
@@ -31,29 +31,48 @@ namespace Raspisanie
         ListViewItem.ListViewSubItem lv6;
 
         string s_el;
+        string begin = "<title>";
+        string end = "</title>";
+        string begin_mon = "<strong><span>";
+        string end_mon_r = "&nbsp;р";
+
+        string begin_1 = @"<div class=""b-timetable__tripname_type_print""><span class=""g-nowrap"">";
+        string sered_1 = @"</span> — <span class=""g-nowrap"">";
+        string end_1 = @"</span></div>";
+
+        string otshet_2 = @"<td class=""b-timetable__column b-timetable__column_type_departure b-timetable__column_state_current"">";
+        string begin_2 = @"}, 'local': '";
+        string end_2 = @"', 'col': 'dep'}""><strong>";
+
+        string otshet_3 = @"<td class=""b-timetable__column b-timetable__column_type_arrival"">" + "\n";
+        string begin_3 = @"}, 'local': '";
+        string end_3 = @"', 'col': 'arr'}""><strong>";
+
+        string begin_4 = @"<span class=""b-timetable__stations"">";
+        string end_4 = @"</span>";
+
         parse parse_el = new parse();
 
         public string zagolovok(string otprv, string nazn, string date)
         {
-          s_el = parse_el.list("http://rasp.yandex.ru/search/suburban/?fromName=" + otprv + "&fromId=&toName=" + nazn + "&&toId=&when=" + date);
-            //s_el = parse_el.list("http://rasp.yandex.ru/search/suburban/?fromName=" + "Москва" + "&fromId=&toName=" + "Дубна" + "&&toId=&when=" + "4.05");
+            s_el = parse_el.list("http://rasp.yandex.ru/search/suburban/?fromName=" + otprv + "&fromId=&toName=" + nazn + "&&toId=&when=" + date);
 
-          if ((s_el.IndexOf("у нас нет информации") > 0) || (s_el.IndexOf("нет данных")>0))
+            if (s_el == "null")
+            {
+                return "Отсутствует соединение";
+            }
+            if ((s_el.IndexOf("у нас нет информации") > 0) || (s_el.IndexOf("нет данных") > 0) )
             {
                 return "Нет информации";
             }
             else
             {
-                string begin = "<title>";
-                string end = "</title>";
 
                 int begin_n = s_el.IndexOf(begin);
                 int end_n = s_el.IndexOf(end);
 
                 string zag = s_el.Substring(begin_n + begin.Length, end_n - begin_n - begin.Length);
 
-                string begin_mon = "<strong><span>";
-                string end_mon_r = "&nbsp;р";
 
                 int begin_mon1 = s_el.IndexOf(begin_mon);
                 int end_mon_r1 = s_el.IndexOf(end_mon_r);
@@ -68,10 +87,9 @@ namespace Raspisanie
 
         public void table(ListView listView1, string otprv, string nazn, string date)
         {
-           s_el = parse_el.list("http://rasp.yandex.ru/search/suburban/?fromName=" + otprv + "&fromId=&toName=" + nazn + "&&toId=&when=" + date);
-             //s_el = parse_el.list("http://rasp.yandex.ru/search/suburban/?fromName=" + "Москва" + "&fromId=&toName=" + "Дубна" + "&&toId=&when=" + "4.05");
+            s_el = parse_el.list("http://rasp.yandex.ru/search/suburban/?fromName=" + otprv + "&fromId=&toName=" + nazn + "&&toId=&when=" + date);
             int number = 1;
-          
+
             while (1 > 0)
             {
                 lv1 = new ListViewItem();
@@ -83,57 +101,47 @@ namespace Raspisanie
 
                 lv1.Text = Convert.ToString(number);
 
-                string begin_1 = @"<div class=""b-timetable__tripname_type_print""><span class=""g-nowrap"">";
-                string sered_1 = @"</span> — <span class=""g-nowrap"">";
-                string end_1 = @"</span></div>";
 
+                //рейсы
                 begin_reis[number] = s_el.IndexOf(begin_1, end_reis[number - 1]);
                 if (begin_reis[number] < 0) { break; }
                 sered_reis[number] = s_el.IndexOf(sered_1, begin_reis[number]);
                 end_reis[number] = s_el.IndexOf(end_1, sered_reis[number]);
                 lv2.Text = s_el.Substring(begin_reis[number] + begin_1.Length, sered_reis[number] - begin_reis[number] - begin_1.Length) + " - " + s_el.Substring(sered_reis[number] + sered_1.Length, end_reis[number] - sered_reis[number] - sered_1.Length);
 
-                string otshet_2 = @"<td class=""b-timetable__column b-timetable__column_type_departure b-timetable__column_state_current"">";
-                string begin_2 = @"}, 'local': '";
-                string end_2 = @"', 'col': 'dep'}""><strong>";
+                //отправление
+
                 otshet_otpr[number] = s_el.IndexOf(otshet_2, end_otpr[number - 1]);
                 begin_otpr[number] = s_el.IndexOf(begin_2, otshet_otpr[number]);
                 end_otpr[number] = s_el.IndexOf(end_2, begin_otpr[number]);
                 lv3.Text = s_el.Substring(begin_otpr[number] + begin_2.Length, end_otpr[number] - begin_otpr[number] - begin_2.Length);
 
-                //int hour = now_time.Hour;
-                //int minute = now_time.Minute;
-               
-                //int hour1 = Convert.ToInt32(lv3.Text.Substring(lv3.Text.Length - 8, 2));
-                //int minute1 = Convert.ToInt32(lv3.Text.Substring(lv3.Text.Length - 5, 2));
-                //if ((hour1 > hour)||((hour1 == hour)&&(minute1>minute)))
-                //{
-                //    lv6.Text = Convert.ToString(hour1);
-                //    lv1.BackColor=Color.YellowGreen;
-                //}
+                time_srvn tsrv = new time_srvn();
+                bool time = tsrv.srvn(lv3.Text);
+                if (time == true)
+                {
+                    lv1.BackColor = Color.Gray;
+                }
 
-                string otshet_3 = @"<td class=""b-timetable__column b-timetable__column_type_arrival"">"+"\n";
-                string begin_3 = @"}, 'local': '";
-                string end_3 = @"', 'col': 'arr'}""><strong>";
+                //прибытие
+
                 otshet_pr[number] = s_el.IndexOf(otshet_3, end_pr[number - 1]);
                 begin_pr[number] = s_el.IndexOf(begin_3, otshet_pr[number]);
                 end_pr[number] = s_el.IndexOf(end_3, begin_pr[number]);
                 lv4.Text = s_el.Substring(begin_pr[number] + begin_3.Length, end_pr[number] - begin_pr[number] - begin_3.Length);
-               
-               
-                string begin_4 = @"<span class=""b-timetable__stations"">";
-                string end_4 = @"</span>";
-                begin_ost[number] = s_el.IndexOf(begin_4, end_ost[number-1]);
+
+                //остановки
+
+                begin_ost[number] = s_el.IndexOf(begin_4, end_ost[number - 1]);
                 end_ost[number] = s_el.IndexOf(end_4, begin_ost[number]);
                 lv5.Text = s_el.Substring(begin_ost[number] + begin_4.Length, end_ost[number] - begin_ost[number] - begin_4.Length);
-                
+
 
                 lv1.SubItems.Add(lv2);
                 lv1.SubItems.Add(lv3);
                 lv1.SubItems.Add(lv4);
-                lv1.SubItems.Add(lv5);
-                lv1.SubItems.Add(lv6);
-           
+                lv1.SubItems.Add(lv5);                
+                string rezult = lv2.Text + lv2.Text + lv2.Text + lv2.Text;
 
                 listView1.Items.Add(lv1);
                 number += 1;
